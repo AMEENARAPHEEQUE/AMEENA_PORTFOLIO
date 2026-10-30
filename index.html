@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Meyawo landing page.">
-    <meta name="author" content="Devcrud">
-    <link rel="icon" href="assets/images/46_Saiyad Ali Rapheeque_EB.jpg">
+    <meta name="description" content="Ameena R - Portfolio Website | Data Science & Full-Stack Developer">
+    <meta name="author" content="Ameena R">
+    <link rel="icon" href="images/Ameena1.jpeg">
     <title>Ameena R's Portfolio</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
@@ -16,6 +16,128 @@
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
     <script src="script.js"></script>
+    <style>
+        .contact-info-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(105, 90, 166, 0.15);
+        }
+        .contact-info-card i {
+            font-size: 24px;
+            color: #695aa6;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .contact-info-card h6 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .contact-info-card a {
+            color: #6c757d;
+            word-break: break-word;
+            text-decoration: none;
+        }
+        .contact-info-card a:hover {
+            color: #695aa6;
+        }
+
+        /* Project Deep-Dive Case Studies */
+        .project-deepdive-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+            text-align: left;
+            border: 1px solid rgba(105, 90, 166, 0.12);
+        }
+        .project-deepdive-card:hover {
+            box-shadow: 0 16px 36px rgba(105, 90, 166, 0.14);
+            transform: translateY(-4px);
+        }
+        .project-deepdive-img-wrap {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 100%;
+            min-height: 280px;
+            background: #f1f0f7;
+        }
+        .project-deepdive-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .project-deepdive-card:hover .project-deepdive-img-wrap img {
+            transform: scale(1.03);
+        }
+        .project-deepdive-body {
+            padding: 30px;
+        }
+        .project-badge {
+            display: inline-block;
+            background: rgba(105, 90, 166, 0.1);
+            color: #695aa6;
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-right: 6px;
+            margin-bottom: 10px;
+        }
+        .project-deepdive-title {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 14px;
+        }
+        .project-feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+        .project-feature-list li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            font-size: 0.94rem;
+            color: #495057;
+            line-height: 1.6;
+        }
+        .project-feature-list li::before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            top: -1px;
+            color: #695aa6;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        .project-meta-box {
+            background: #f8f9fc;
+            border-radius: 10px;
+            padding: 12px 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: #6c757d;
+            border-left: 3px solid #695aa6;
+        }
+        .project-meta-box strong {
+            color: #343a40;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -23,7 +145,7 @@
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
-            <a class="logo" style="width:350px" href="#">SAIYAD ALI</a>
+            <a class="logo" style="width:350px" href="#">AMEENA R</a>
             <ul class="nav">
                 <li class="item">
                     <a class="link" href="#home">Home</a>
@@ -38,15 +160,11 @@
                     <a class="link" href="#portfolio">Portfolio</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#skill-card">skills</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#blog">Blog</a>
+                    <a class="link" href="#skills">Skills</a>
                 </li>
                 <li class="item">
                     <a class="link" href="#contact">Contact</a>
                 </li>
-
             </ul>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
                 <div class="hamburger-box">
@@ -62,11 +180,12 @@
         <div class="header-content container">
             <h1 class="header-title my-transition">
                 <span class="up">HI!</span>
-                <span class="down">I am SAIYAD ALI </span>
+                <span class="down">I am </span>
+                <span class="down"> AMEENA R </span>
             </h1>
-            <p class="header-subtitle my-transition">MERN DEVELOPER &#183; EDGE AI ENTHUSIAST &#183; MAKER</p>
+            <p class="header-subtitle my-transition">DATA SCIENCE &#183; MACHINE LEARNING &#183; WEB DEVELOPER &#183; TECH ENTHUSIAST</p>
 
-            <button class="btn btn-primary"><a href="#portfolio" style="color: white;">Visit My Works</a></button>
+            <button class="btn btn-primary"><a href="#portfolio" style="color: white; text-decoration: none;">Visit My Works</a></button>
         </div>
     </header><!-- end of page header -->
 
@@ -77,29 +196,23 @@
             <!-- about wrapper -->
             <div class="about">
                 <div class="about-img-holder my-transition">
-                    <img src="assets/images/46_Saiyad Ali Rapheeque_EB.jpg" class="about-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page "
+                    <img src="images/Ameena1.jpeg" class="about-img"
+                        alt="Ameena R"
                         style="border-radius:15px;">
                 </div>
                 <div class="about-caption my-transition ml-3">
-                    <p class="section-subtitle ">Who Am I ?</p>
+                    <p class="section-subtitle">Who Am I ?</p>
                     <h2 class="section-title mb-3">About Me</h2>
                     <p>
-                        I'm <b style="font-weight:700;">Ameena R</b>, a final-year B.Tech Computer Science and
-                        Engineering student specializing in Data Science at Mar Athanasius College of Engineering,
-                        Kothamangalam, with a strong aspiration to build a career in software development and
-                        data-driven technologies. My passion lies in developing practical solutions using Python,
-                        JavaScript, HTML, CSS, and Machine Learning, while continuously exploring new technologies.
-
-                        This personal website serves as a showcase of my development journey, projects, technical
-                        skills, and experiences. I enjoy transforming ideas into meaningful applications and exploring
-                        areas such as Data Science, Machine Learning, AI, and web development. I'm always eager to
-                        learn, take on new challenges, collaborate with others, and grow as a technology enthusiast.
-                        Feel free to explore my work and connect with me!
-                        .
+                        I'm <b style="font-weight:700;">Ameena R</b>, a final-year Computer Science and Engineering undergraduate specializing in Data Science at Mar Athanasius College of Engineering, Kothamangalam. I have hands-on experience in machine learning and full-stack development, skilled in building end-to-end data-driven solutions — from predictive modeling to cloud-integrated web platforms using Python, Scikit-learn, TensorFlow, Flask, and SQL.
                     </p>
-                    <button class="btn-rounded btn btn-outline-primary mt-4"><a href="./images/Saiyadnewresume (5).pdf "
-                            target="_blank">Download CV</a></button>
+                    <p>
+                        With a strong foundation in data structures, algorithms, and statistical analysis complemented by leadership across IEEE student chapters, I enjoy transforming ideas into meaningful applications. Feel free to explore my work and connect with me!
+                    </p>
+
+                    <button class="btn-rounded btn btn-outline-primary mt-4">
+                        <a href="Ameena_resumenewer.pdf" target="_blank" style="text-decoration: none;">Download CV</a>
+                    </button>
                 </div>
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
@@ -108,48 +221,43 @@
     <!-- service section -->
     <section class="section" id="service">
         <div class="container text-center">
-            <p class="section-subtitle ">What I Do ?</p>
-            <h6 class="section-title mb-6 my-transition"> My Service</h6>
+            <p class="section-subtitle">What I Do ?</p>
+            <h6 class="section-title mb-6 my-transition">My Services</h6>
             <!-- row -->
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/developer.jpeg" alt="pencil image" class="icon">
+                            <img src="assets/images/developer.jpeg" alt="Web Developer" class="icon">
                             <h6 class="title">Web Developer</h6>
-                            <p class="subtitle">Passionate web developer, developing the ideas in your mind</p>
+                            <p class="subtitle">Building responsive, functional, and scalable full-stack web applications.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/responsive.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
+                            <img src="assets/imgs/responsive.svg" alt="Web Design" class="icon">
                             <h6 class="title">Web Design</h6>
-                            <p class="subtitle">specialized in web design, utilizing HTML5, CSS3, JavaScript, and
-                                Bootstrap 5 .</p>
+                            <p class="subtitle">Specialized in crafting clean, accessible user interfaces using HTML5, CSS3, JavaScript, and Bootstrap.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/AI INTEGRATION.jpeg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title"> EDGE AI Integration</h6>
-                            <p class="subtitle">Integrating Hardware Edge devices with AI using IoT enviorment</p>
+                            <img src="assets/images/AI INTEGRATION.jpeg" alt="Machine Learning & AI" class="icon">
+                            <h6 class="title">Machine Learning & AI</h6>
+                            <p class="subtitle">Developing predictive models, association rule mining algorithms, and intelligent systems.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/OIP.jpeg" alt="" class="icon">
-                            <h6 class="title">Hardware Maker</h6>
-                            <p class="subtitle">Integrating & implementing customised hardware models of your need</p>
+                            <img src="assets/imgs/analytics.svg" alt="Data Science & Analytics" class="icon">
+                            <h6 class="title">Data Science & Analytics</h6>
+                            <p class="subtitle">Time-series data processing, SQL database optimization, and statistical predictive analytics.</p>
                         </div>
                     </div>
                 </div>
@@ -162,290 +270,287 @@
         <div class="container text-center">
             <p class="section-subtitle">What I Did ?</p>
             <h6 class="section-title mb-6 my-transition">Portfolio</h6>
-            <!-- row -->
+            <!-- row 1 -->
             <div class="row">
                 <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img src="assets/images/machine learning spv.jpg" class="portfolio-card-img" alt="">
+                    <a href="#smart-city-deepdive" class="portfolio-card">
+                        <img src="assets/images/smart_city_twin.jpg" class="portfolio-card-img" alt="Smart City Digital Twin Platform">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>ML & IoT Based SPV Fault Analysis</h5>
-                                    <p class="font-weight-normal">Category:Edge AI Integration</p>
+                                <h4>Smart City & Traffic Congestion</h4>
+                                <p class="font-weight-normal">LSTM-Based Prediction & Digital Twin</p>
+                                <span class="badge badge-primary mt-2">View Details &darr;</span>
                             </span>
                         </span>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/images/MDlite.png" class="img-responsive rounded"
-                            alt="">
+                    <a href="javascript:void(0)" class="portfolio-card">
+                        <img class="portfolio-card-img" src="assets/images/disease_predictor.jpg" alt="Disease Predictor Using Apriori Algorithm">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>MDLite</h5>
-                                    <p class="font-weight-normal">Category: Hardware Maker</p>
+                                <h4>Disease Predictor</h4>
+                                <p class="font-weight-normal">Category: Machine Learning & Full-Stack (Flask/Python)</p>
                             </span>
                         </span>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/images/BIGBINARY ACADEMY PHOTO.png"
-                            class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <a href="javascript:void(0)" class="portfolio-card">
+                        <img class="portfolio-card-img" src="assets/images/BIGBINARY ACADEMY PHOTO.png" class="img-responsive rounded"
+                            alt="Big Binary academy clone">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>Big Binary academy clone</h5>
-                                    <p class="font-weight-normal">Category: Web Development using Bootstrap 5</p>
+                                <h4>Big Binary academy clone</h4>
+                                <p class="font-weight-normal">Category: Web Development using Bootstrap 5</p>
                             </span>
                         </span>
                     </a>
                 </div>
-            </div><!-- end of row -->
+            </div><!-- end of row 1 -->
 
             <br>
+            <!-- row 2 -->
             <div class="row">
                 <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img src="assets/images/hacksterclonephoto.png" class="portfolio-card-img" alt="">
+                    <a href="javascript:void(0)" class="portfolio-card">
+                        <img src="assets/images/hacksterclonephoto.png" class="portfolio-card-img" alt="hackster.io Home Page">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>hackster.io Home Page</h5>
-                                    <p class="font-weight-normal">Category:Web designing</p>
+                                <h4>hackster.io Home Page</h4>
+                                <p class="font-weight-normal">Category: Web designing</p>
                             </span>
                         </span>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/images/lightthelivesimg.png"
-                            class="img-responsive rounded" alt="">
+                    <a href="#drms-deepdive" class="portfolio-card">
+                        <img class="portfolio-card-img" src="assets/images/disaster_relief.jpg" alt="Disaster Relief Management System (DRMS)">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>Light The Lives</h5>
-                                    <p class="font-weight-normal">Category: SPV Installation</p>
+                                <h4>Disaster Relief System (DRMS)</h4>
+                                <p class="font-weight-normal">Real-Time Resource & Personnel Tracking (SQL & Python)</p>
+                                <span class="badge badge-primary mt-2">View Details &darr;</span>
                             </span>
                         </span>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/images/hianime clone.png"
-                            class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <a href="javascript:void(0)" class="portfolio-card">
+                        <img class="portfolio-card-img" src="assets/images/hianime clone.png" class="img-responsive rounded"
+                            alt="Hi Anime Clone">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>Hi Anime Clone</h5>
-                                    <p class="font-weight-normal">Category: Web designing</p>
+                                <h4>Hi Anime Clone</h4>
+                                <p class="font-weight-normal">Category: Web designing</p>
                             </span>
                         </span>
                     </a>
+                </div>
+            </div><!-- end of row 2 -->
+
+            <!-- Detailed Case Studies / Deep-Dive Section -->
+            <div class="mt-5 pt-4">
+                <p class="section-subtitle">Deep Dive</p>
+                <h6 class="section-title mb-5 my-transition">Featured Project Case Studies</h6>
+
+                <!-- Project 1: Smart Traffic Congestion & Digital Twin Platform -->
+                <div class="project-deepdive-card" id="smart-city-deepdive">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-lg-5 p-3">
+                            <div class="project-deepdive-img-wrap">
+                                <img src="assets/images/smart_city_twin.jpg" alt="Smart City Digital Twin & Traffic Congestion Platform">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="project-deepdive-body">
+                                <div>
+                                    <span class="project-badge">Data Science</span>
+                                    <span class="project-badge">Deep Learning (LSTM)</span>
+                                    <span class="project-badge">Time-Series</span>
+                                    <span class="project-badge">Cloud Integration</span>
+                                </div>
+                                <h3 class="project-deepdive-title">Cloud-Based Intelligent Smart City Digital Twin & Traffic Congestion Platform</h3>
+                                <ul class="project-feature-list">
+                                    <li><strong>Digital Twin Infrastructure:</strong> Developed a high-fidelity cloud-based digital twin model replicating the urban roadway infrastructure, traffic nodes, and vehicular circulation of Kothamangalam town.</li>
+                                    <li><strong>LSTM Congestion Prediction:</strong> Collected and preprocessed real-time traffic flow sensor streams to identify congestion patterns and forecast peak traffic periods using Long Short-Term Memory (LSTM) predictive analytics.</li>
+                                    <li><strong>Time-Series & Cloud Processing:</strong> Implemented robust cloud database integration and time-series data pipelines capable of handling live telemetry streams with high availability.</li>
+                                    <li><strong>Intelligent Urban Mobility:</strong> Empowered municipal planners with data-driven decision dashboards to anticipate bottlenecks and optimize road traffic routing before peak congestion occurs.</li>
+                                </ul>
+                                <div class="project-meta-box">
+                                    <span><strong>Core Stack:</strong> Python, LSTM, TensorFlow, Pandas, Cloud Databases, Time-Series Analytics</span>
+                                    <span><strong>Year:</strong> 2025</span>
+                                    <span><strong>Domain:</strong> Intelligent Transportation Systems (ITS)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Disaster Relief Management System (DRMS) -->
+                <div class="project-deepdive-card" id="drms-deepdive">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-lg-5 order-lg-2 p-3">
+                            <div class="project-deepdive-img-wrap">
+                                <img src="assets/images/disaster_relief.jpg" alt="Disaster Relief Management System (DRMS)">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 order-lg-1">
+                            <div class="project-deepdive-body">
+                                <div>
+                                    <span class="project-badge">Python</span>
+                                    <span class="project-badge">SQL</span>
+                                    <span class="project-badge">Database Design</span>
+                                    <span class="project-badge">Emergency Logistics</span>
+                                </div>
+                                <h3 class="project-deepdive-title">Disaster Relief Management System (DRMS)</h3>
+                                <ul class="project-feature-list">
+                                    <li><strong>Coordinated Relief Operations:</strong> Built a centralized emergency management system to efficiently manage disaster relief operations, facilitating seamless command across rescue personnel, NGOs, and government responders.</li>
+                                    <li><strong>Real-Time Personnel & Resource Tracking:</strong> Implemented coordinated live tracking for rescue personnel deployment, emergency volunteer teams, relief shelter allocations, and victim status records.</li>
+                                    <li><strong>Inventory & Logistics Management:</strong> Designed real-time monitoring and allocation modules for essential supplies including food rations, medical kits, clean drinking water, and transport vehicles.</li>
+                                    <li><strong>High-Performance SQL Architecture:</strong> Architected normalized relational database schemas using Python and SQL with fast query retrieval, real-time data storage, and automated threshold alerts for critical inventory depletion.</li>
+                                </ul>
+                                <div class="project-meta-box">
+                                    <span><strong>Core Stack:</strong> Python, SQL, Relational Schema Architecture, Data Analytics</span>
+                                    <span><strong>Year:</strong> 2025</span>
+                                    <span><strong>Domain:</strong> Emergency Logistics & Public Safety Software</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section> <!-- end of portfolio section -->
 
-    <section class="section" id="service">
+    <!-- skills section -->
+    <section class="section" id="skills">
         <div class="container text-center">
-            <p class="section-subtitle" id="skill-card">what I Gain?</p>
-            <h6 class="section-title mb-6 my-transition "> My Skills</h6>
-            <!-- row -->
+            <p class="section-subtitle" id="skill-card">What I Gain?</p>
+            <h6 class="section-title mb-6 my-transition">My Skills</h6>
+            <!-- row 1 -->
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/skilllogo/html5_logo.png" alt="pencil image" class="icon">
-                            <h6 class="title">HTML</h6>
-                            <p class="subtitle">Experienced in building well-structured and semantic web pages using
-                                HTML.</p>
+                            <img src="assets/images/skilllogo/html5_logo.png" alt="HTML5" class="icon">
+                            <h6 class="title">HTML5</h6>
+                            <p class="subtitle">Experienced in building well-structured and semantic web pages using HTML5.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/skilllogo/css_LOGO.png"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">CSS</h6>
-                            <p class="subtitle">Skilled in creating responsive, visually appealing designs with CSS.</p>
+                            <img src="assets/images/skilllogo/css_LOGO.png" alt="CSS3" class="icon">
+                            <h6 class="title">CSS3</h6>
+                            <p class="subtitle">Skilled in creating responsive, visually appealing and modern designs with CSS3.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/skilllogo/javascript__LOGO.png"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">javaScript</h6>
-                            <p class="subtitle">Proficient in adding interactivity and dynamic features using
-                                JavaScript.</p>
+                            <img src="assets/images/skilllogo/javascript__LOGO.png" alt="JavaScript" class="icon">
+                            <h6 class="title">JavaScript</h6>
+                            <p class="subtitle">Proficient in adding interactivity, DOM manipulation, and dynamic features.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/skilllogo/git-logo.png" alt="" class="icon">
-                            <h6 class="title">Git</h6>
-                            <p class="subtitle">Proficient in version control and collaboration using Git for efficient
-                                project management.</p>
+                            <img src="assets/images/skilllogo/git-logo.png" alt="Git" class="icon">
+                            <h6 class="title">Git & GitHub</h6>
+                            <p class="subtitle">Proficient in version control, branching, repository management, and collaboration.</p>
                         </div>
                     </div>
                 </div>
-            </div><!-- end of row -->
-
+            </div><!-- end of row 1 -->
 
             <br>
+            <!-- row 2 -->
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/skilllogo/PYTHON-LOGO.png" alt="pencil image" class="icon">
-                            <h6 class="title">python</h6>
-                            <p class="subtitle">Experienced in writing efficient and clean code using Python for various
-                                applications</p>
+                            <img src="assets/images/skilllogo/PYTHON-LOGO.png" alt="Python" class="icon">
+                            <h6 class="title">Python</h6>
+                            <p class="subtitle">Writing clean, efficient code for machine learning, data processing, and Flask backends.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/skilllogo/arduino2.png"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Arduino</h6>
-                            <p class="subtitle">Capable of creating interactive projects and prototypes using Arduino
-                            </p>
+                            <img src="assets/images/skilllogo/sql-LOGO.png" alt="SQL" class="icon">
+                            <h6 class="title">SQL</h6>
+                            <p class="subtitle">Skilled in relational database design, query optimization, and real-time data handling.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/skilllogo/bootstrap.jpeg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">BootStrap </h6>
-                            <p class="subtitle">Integrating Hardware Edge devices with AI using IoT enviorment</p>
+                            <img src="assets/images/skilllogo/bootstrap.jpeg" alt="Bootstrap" class="icon">
+                            <h6 class="title">Bootstrap</h6>
+                            <p class="subtitle">Designing responsive, mobile-first grid layouts and modern UI components.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 ">
+                <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/skilllogo/c1.png" alt="" class="icon">
-                            <h6 class="title">C</h6>
-                            <p class="subtitle">Integrating & implementing customised hardware models of your need</p>
+                            <img src="assets/imgs/analytics.svg" alt="Machine Learning" class="icon">
+                            <h6 class="title">Machine Learning</h6>
+                            <p class="subtitle">Hands-on experience with Scikit-learn, TensorFlow, Pandas, NumPy, and predictive algorithms.</p>
                         </div>
                     </div>
                 </div>
-            </div><!-- end of row -->
+            </div><!-- end of row 2 -->
         </div>
-    </section>
-
-    <!-- blog section -->
-    <section class="section" id="blog">
-        <!-- container -->
-        <div class="container text-center">
-            <p class="section-subtitle">what's my recents?</p>
-            <h6 class="section-title mb-6 my-transition">Achievements</h6>
-            <!-- blog-wrapper -->
-            <div class="blog-card">
-                <div class="blog-card-header my-transition">
-                    <img src="assets/images/skilllogo/hackathon-hackify.jpeg" class="blog-card-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page ">
-                </div>
-                <div class="blog-card-body ">
-                    <h5 class="blog-card-title">ML-Lite</h6>
-
-
-                        <p>🏆 Exciting News Alert! 🏆
-                            I'm thrilled to announce that our team, Latency Zero, emerged victorious as the Best
-                            Innovation Team in the recent Hackathon "hashtag#Hackify" organized by IEDC MACE and
-                            sponsored by KeyValue Software Systems! 🚀💡</p>
-
-                        <p><b>Our winning project? A groundbreaking ML-based Malaria Detection System utilizing Seeed
-                                Studio XIAO ESP32S3 Sense, alongside transferring data through LoRa! 🦟🔬</b></p>
-                        <p>I'm immensely grateful to Seeed Studio for providing the hardware that was instrumental in
-                            bringing our innovative solution to life. Their support and high-quality products truly
-                            empowered us to push the boundaries of what's possible in healthcare technology.
-                            It's been an incredible journey collaborating with my talented teammate, Muhammed Zain, as
-                            we leveraged cutting-edge technology to tackle one of the world's most pressing healthcare
-                            challenges. Our innovative solution not only demonstrates the power of machine learning in
-                            healthcare but also showcases the potential of LoRa technology in data transmission for
-                            remote healthcare systems.</p>
-
-                        <a href="https://www.linkedin.com/posts/alisaiyad_hackify-latencyzero-hackify-activity-7193181841120530432-GoA4?utm_source=share&utm_medium=member_desktop"
-                            class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-                </div>
-            </div><!-- end of blog wrapper -->
-
-            <!-- blog-wrapper -->
-            <div class="blog-card">
-                <div class="blog-card-header my-transition">
-                    <img src="assets/images/skilllogo/cmdmace.jpeg" class="blog-card-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                </div>
-                <div class="blog-card-body">
-                    <h5 class="blog-card-title">Won IEEE CMD Humanitarian Award 23'Won IEEE CMD Humanitarian Award 23'
-                        </h6>
-
-                        <p>An incredible moment receiving the IAS CMD Award from Prof. Andy Knight, President of IEEE
-                            Industry Applications Society, at the esteemed IEEE PESGRE 2023 conference in Trivandrum,
-                            Kerala, India. It was an honor to secure the 3rd rank in the Humanitarian contest hosted by
-                            IEEE IAS Society, a significant milestone in my journey.
-
-                            Teammate Safad and I had the privilege to collect the certificate together at the IEEE
-                            PESGRE, a moment that encapsulated our collaborative effort and dedication in this impactful
-                            endeavor.</p>
-
-                        <a href="https://www.linkedin.com/posts/muhd-safad-p_an-incredible-moment-receiving-the-ias-cmd-activity-7143996700989267968-y2JB?utm_source=share&utm_medium=member_desktop"
-                            class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-                </div>
-            </div><!-- end of blog wrapper -->
-            <div class="blog-card">
-                <div class="blog-card-header my-transition">
-                    <img src="assets/images/skilllogo/humanitarian.jpeg" class="blog-card-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page ">
-                </div>
-                <div class="blog-card-body ">
-                    <h5 class="blog-card-title">honoured as Best Humanitarian student volunteer</h6>
-
-
-                        <p>✨"Success is not how high you have climbed, but how you make a positive difference to the
-                            world"
-                            ~Roy T.Bennet.✨<br>
-
-                            IEEE MACE SB extends its hearty congratulations to our dedicated volunteer SAIYAD ALI
-                            RAPHEEQUE (S8 EB) for earning the 𝗜𝗘𝗘𝗘 𝗞𝗲𝗿𝗮𝗹𝗮 𝗦𝗲𝗰𝘁𝗶𝗼𝗻
-                            𝗢𝘂𝘁𝘀𝘁𝗮𝗻𝗱𝗶𝗻𝗴 𝗛𝘂𝗺𝗮𝗻𝗶𝘁𝗮𝗿𝗶𝗮𝗻 𝗦𝘁𝘂𝗱𝗲𝗻𝘁 𝗩𝗼𝗹𝘂𝗻𝘁𝗲𝗲𝗿 2023
-                            𝗔𝘄𝗮𝗿𝗱. 🥳🥳
-
-                            <br> Kudos on your achievement!🤩<br>
-
-                            Your hard work and dedication have paid off, and it's truly inspiring to see your success.
-                            This milestone is a testament to your determination and talent. Keep reaching for the stars
-                            and making your dreams a reality. Well done!✨
-                        </p>
-
-                        </p>
-
-                        <a href="https://www.linkedin.com/posts/alisaiyad_hackify-latencyzero-hackify-activity-7193181841120530432-GoA4?utm_source=share&utm_medium=member_desktop"
-                            class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-                </div>
-            </div>
-        </div><!-- end of container -->
-    </section><!-- end of blog section -->
+    </section><!-- end of skills section -->
 
     <!-- contact section -->
-    <section class="section " id="contact">
+    <section class="section" id="contact">
         <div class="container text-center">
             <p class="section-subtitle">How can you communicate?</p>
             <h6 class="section-title mb-5">Contact Me</h6>
+
+            <!-- Contact quick info cards -->
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-4 col-lg-3">
+                    <div class="contact-info-card">
+                        <i class="ti-email"></i>
+                        <h6>Email</h6>
+                        <a href="mailto:ameenarapheeque@gmail.com">ameenarapheeque@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="contact-info-card">
+                        <i class="ti-mobile"></i>
+                        <h6>Phone</h6>
+                        <a href="tel:+918138997096">+91 8138997096</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="contact-info-card">
+                        <i class="ti-linkedin"></i>
+                        <h6>LinkedIn</h6>
+                        <a href="https://www.linkedin.com/in/ameena-r" target="_blank">linkedin.com/in/ameena-r</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="contact-info-card">
+                        <i class="ti-github"></i>
+                        <h6>GitHub</h6>
+                        <a href="https://github.com/AMEENARAPHEEQUE" target="_blank">AMEENARAPHEEQUE</a>
+                    </div>
+                </div>
+            </div>
+
             <!-- contact form -->
             <form id="signup-form">
-
                 <div class="form-group row">
                     <div class="col-sm-2"></div>
                     <label for="firstName" class="col-sm-2 col-form-label">Your Name</label>
@@ -477,16 +582,13 @@
                     <div class="col-sm-2"></div>
                     <label for="Message" class="col-sm-2 col-form-label">Message</label>
                     <div class="col-sm-6">
-                        <textarea class="form-control" id="Message" rows="3"
+                        <textarea class="form-control" id="Message" name="mymessage" rows="3"
                             placeholder="Enter your message"></textarea>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-secondary">submit</button>
-
-
+                <button type="submit" class="btn btn-secondary">Submit</button>
             </form>
-
             <!-- end of contact form -->
         </div><!-- end of container -->
     </section><!-- end of contact section -->
@@ -495,49 +597,23 @@
     <div class="container">
         <footer class="footer">
             <p class="mb-0">Copyright
-                <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">Saiyad
-                    Ali Rapheeque</a>
+                <script>document.write(new Date().getFullYear())</script> &copy; Ameena R
             </p>
             <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="https://github.com/SaiyadAli" class="link"><i class="ti-github"></i></a>
-
-                <a href="https://www.linkedin.com/in/alisaiyad/" class="link"><i class="ti-linkedin"></i></a>
+                <a href="mailto:ameenarapheeque@gmail.com" class="link" title="Email"><i class="ti-email"></i></a>
+                <a href="https://github.com/AMEENARAPHEEQUE" target="_blank" class="link" title="GitHub"><i class="ti-github"></i></a>
+                <a href="https://www.linkedin.com/in/ameena-r" target="_blank" class="link" title="LinkedIn"><i class="ti-linkedin"></i></a>
             </div>
         </footer>
     </div> <!-- end of page footer -->
 
-    <!-- core  -->
-    <!-- script for contacts -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- core scripts -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-
-    <!-- bootstrap 3 affix -->
+    <!-- bootstrap affix -->
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
-
 
 </body>
 
